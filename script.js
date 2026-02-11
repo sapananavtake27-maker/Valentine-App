@@ -15,8 +15,8 @@ let scale = 1;
 let noMoveCount = 0;
 let swapThreshold = Math.floor(Math.random() * 2) + 5; // 5-6 moves
 
-// 1. The Growth Trick
-noBtn.addEventListener('mouseover', () => {
+// Function to handle the "No" button evasion
+function handleNoButtonEvasion() {
     // Make the YES button bigger
     scale += 0.3;
     yesBtn.style.transform = `scale(${scale})`;
@@ -40,6 +40,13 @@ noBtn.addEventListener('mouseover', () => {
         noMoveCount = 0;
         swapThreshold = Math.floor(Math.random() * 2) + 5;
     }
+}
+
+// 1. The Growth Trick - Works for desktop (mouseover) and mobile (touchstart/mouseenter)
+noBtn.addEventListener('mouseover', handleNoButtonEvasion);
+noBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent click from firing
+    handleNoButtonEvasion();
 });
 
 // 3. Success
