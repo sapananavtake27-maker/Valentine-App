@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Question</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="game-card">
+        <div id="setup">
+            <h1 id="main-title">How much do you love me? ❤️</h1>
+            
+          <div class="slider-container">
+    <label>Love Meter: <span id="percent">100%</span></label>
+    <p id="status-text">✨</p> 
+    <input type="range" id="love-slider" min="0" max="100" value="100">
+</div>
+
+            <div class="action-area">
+            <h2 id="main-title">Will you be my valentine? ❤️</h2>
+                <button id="yes-btn">No</button>
+                <button id="no-btn">Yes</button>
+            </div>
+        </div>
+
+        <div id="celebration" class="hidden">
+            <h1>I KNEW IT! 🥰</h1>
+            <p>Happy valentine's Day to my husband!! I love you, Bhagyoday ❤️!!!</p>
+            <p> You are my biggest blessing.</p>
+            <div class="heart-loader"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
